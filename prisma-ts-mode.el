@@ -52,7 +52,7 @@
 (require 'treesit)
 
 (defcustom prisma-ts-mode-indent-level 2
-  "Number of spaces for each indententation step."
+  "Number of spaces for each indentation step."
   :group 'prisma
   :type 'integer
   :safe 'integerp)
