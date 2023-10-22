@@ -1,7 +1,4 @@
 ;;; prisma-ts-mode.el --- Major mode for prisma using tree-sitter -*- lexical-binding: t; -*-
-
-;; This is free and unencumbered software released into the public domain.
-
 ;; Author: Noah Peart <noah.v.peart@gmail.com>
 ;; URL: https://github.com/nverno/prisma-ts-mode
 ;; Version: 1.0.0
