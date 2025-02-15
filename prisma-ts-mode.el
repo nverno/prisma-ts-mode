@@ -267,6 +267,7 @@
 
     (treesit-major-mode-setup)))
 
+;;;###autoload
 (if (treesit-ready-p 'prisma)
     (add-to-list 'auto-mode-alist '("\\.prisma\\'" . prisma-ts-mode)))
 
