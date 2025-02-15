@@ -36,7 +36,7 @@
 ;;
 ;; Install the tree-sitter grammar library from
 ;; https://github.com/victorhqc/tree-sitter-prisma, eg.
-;;    
+;;
 ;;     (add-to-list
 ;;      'treesit-language-source-alist
 ;;      '(prisma "https://github.com/victorhqc/tree-sitter-prisma")
@@ -134,7 +134,7 @@
      (model_declaration (identifier) @font-lock-function-name-face)
      (type_declaration (identifier) @font-lock-function-name-face)
      (view_declaration (identifier) @font-lock-function-name-face))
-      
+
    :language 'prisma
    :feature 'constant
    '([(true) (false) (null) (enumeral)] @font-lock-constant-face)
@@ -142,12 +142,12 @@
    :language 'prisma
    :feature 'number
    '((number) @font-lock-number-face)
-   
+
    :language 'prisma
    :feature 'type
    '((column_type (identifier) @font-lock-type-face)
      (type_declaration_type) @font-lock-type-face)
-   
+
    :language 'prisma
    :feature 'attribute
    '((attribute
@@ -161,7 +161,7 @@
       [(identifier) @font-lock-builtin-face
        (member_expression) @font-lock-builtin-face
        (call_expression [(member_expression) (identifier)] @font-lock-builtin-face)]))
-   
+
    :language 'prisma
    :feature 'function
    '((call_expression
@@ -232,7 +232,7 @@
     (setq-local comment-end "")
     (setq-local comment-start-skip "//+[ \t]*")
     (setq-local parse-sexp-ignore-comments t)
-    
+
     ;; Indentation
     (setq-local treesit-simple-indent-rules prisma-ts-mode--indent-rules)
 
@@ -249,7 +249,7 @@
     (setq-local treesit-defun-name-function #'prisma-ts-mode--defun-name)
     (setq-local treesit-defun-type-regexp
                 (rx (or "model" "enum" "datasource" "view" "type") "_declaration"))
-    
+
     ;; navigation objects
     (setq-local treesit-thing-settings
                 `((prisma
